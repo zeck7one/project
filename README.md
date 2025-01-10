@@ -6,4 +6,4 @@ em programação
 
 REQUISITOS:
 
-estala a biblioteca flet em seu ambinte
+instalar a biblioteca flet em seu ambinte
