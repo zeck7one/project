@@ -1,11 +1,11 @@
 import flet as ft
 
-#funcao que de define a tela do chat
+
 def main(pagina):
-    texto = ft.Text('weBZap')
+    texto = ft.Text('weBZep')
 
 
-    #define a aplicacao como coluna
+   
     chat = ft.Column()
 
     
@@ -29,15 +29,15 @@ def main(pagina):
 
     
 
-    campo_mensagem  = ft.TextField(label='digite sua mensagem', on_submit=enviar_mensagem)
-    botao_enviar = ft.ElevatedButton(text='enviar', on_click=enviar_mensagem)
+    campo_mensagem  = ft.TextField(label='Digite sua mensagem', on_submit=enviar_mensagem)
+    botao_enviar = ft.ElevatedButton(text='Enviar', on_click=enviar_mensagem)
     linha_enviar = ft.Row([campo_mensagem, botao_enviar])
     def entrar_chat(evento):
         popup.open = False
         pagina.remove(botao_iniciar)
         pagina.remove(texto)
         pagina.add(chat)
-        pagina.pubsub.send_all(f'{nome_usuario.value} entrou no chat')
+        pagina.pubsub.send_all(f'{nome_usuario.value} Entrou no chat')
         pagina.add(linha_enviar)
 
 
@@ -47,9 +47,9 @@ def main(pagina):
 
 
 
-    titulo_popup = ft.Text('bem vindo ao ferZap')
-    nome_usuario = ft.TextField(label='escreva seu nome no chat')
-    botao__entrar = ft.ElevatedButton('entrar', on_click=entrar_chat)
+    titulo_popup = ft.Text('bem vindo ao zep')
+    nome_usuario = ft.TextField(label='Escreva seu nome no chat')
+    botao__entrar = ft.ElevatedButton('Entrar', on_click=entrar_chat)
     popup =ft.AlertDialog(
         open= False,
         modal= True,
